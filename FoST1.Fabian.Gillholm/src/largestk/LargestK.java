@@ -1,13 +1,12 @@
 package largestk;
 import assignmentframework.Interaction;
-import assignmentframework.Validation;
 
 /**
  * Created by Foss on 2015-09-04.
  */
 public class LargestK {
     public static void main(String[] args) {
-        int N = Interaction.getPositiveInteger("Please enter a positive integer:");
+        int N = Interaction.getPositiveInteger("Please enter a positive integer: ");
         int K = 0;
         int sum = 0;
 

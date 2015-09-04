@@ -1,6 +1,5 @@
 package countdigits;
 import assignmentframework.Interaction;
-import assignmentframework.Validation;
 
 /**
  * Created by Foss on 2015-09-04.
@@ -14,7 +13,7 @@ public class CountDigits {
 
         // Get an integer from the user and convert it to a string
         // Note that leading zeros will be ignored
-        int input = Interaction.getPositiveInteger("Please enter a positive integer:");
+        int input = Interaction.getPositiveInteger("Please enter a positive integer: ");
         String digits = Integer.toString(input);
 
         // Loop through the string, converting each character to a digit and checking it

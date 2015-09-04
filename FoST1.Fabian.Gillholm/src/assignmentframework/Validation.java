@@ -10,4 +10,11 @@ public class Validation {
         }
         return false;
     }
+
+    public static boolean validateOddInteger(int i) {
+        if(i%2 == 1) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Interaction {
     public static String queryString(String prompt) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(prompt);
+        System.out.print(prompt);
 
         String response = scanner.nextLine();
         return response;
@@ -37,6 +37,28 @@ public class Interaction {
             try {
                 input = queryInt(prompt);
                 inputIsValid = Validation.validatePositiveInteger(input);
+            }
+            catch(Exception e) {
+                // No need to do anything here
+            }
+
+            // Display a polite error message if the user supplies invalid input
+            if(!inputIsValid) {
+                System.out.println("Stop fucking around. Try again.");
+            }
+        }
+
+        return input;
+    }
+
+    public static int getOddPositiveInteger(String prompt) {
+        int input = 0;
+        boolean inputIsValid = false;
+
+        while(!inputIsValid) {
+            try {
+                input = getPositiveInteger(prompt);
+                inputIsValid = Validation.validateOddInteger(input);
             }
             catch(Exception e) {
                 // No need to do anything here
