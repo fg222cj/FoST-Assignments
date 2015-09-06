@@ -1,7 +1,5 @@
 package countchars;
 
-import assignmentframework.Interaction;
-
 import java.io.File;
 import java.util.Scanner;
 
@@ -16,8 +14,17 @@ public class CountChars {
         int numbers = 0; // Number of number type characters
         int other = 0; // Number of other characters that don't fit any of the above
 
+        String filepath = "";
+        if(args.length != 0) {
+            filepath = args[0];
+        }
+        else {
+            System.out.println("CountChars expects a filepath as a parameter!");
+            System.exit(1);
+        }
 
-        File file = new File("H:\\Fabian\\SergioGarciaBeatsTheAmericans.txt");
+
+        File file = new File(filepath);
         try {
             Scanner fileScan = new Scanner(file);
 
