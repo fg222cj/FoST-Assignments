@@ -2,7 +2,7 @@ package assignmentframework;
 import java.util.Scanner;
 
 /**
- * Created by Foss on 2015-09-04.
+ * Created by Fabian Gillholm on 2015-09-04.
  */
 public class Interaction {
     public static String queryString(String prompt) {

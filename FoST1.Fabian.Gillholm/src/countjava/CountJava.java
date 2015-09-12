@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Created by Foss on 2015-09-11.
+ * Created by Fabian Gillholm on 2015-09-11.
  */
 public class CountJava {
     // main should be called with a filepath as the only parameter

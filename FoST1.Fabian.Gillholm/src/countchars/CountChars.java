@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- * Created by Foss on 2015-09-06.
+ * Created by Fabian Gillholm on 2015-09-06.
  */
 public class CountChars {
     public static void main(String[] args) {

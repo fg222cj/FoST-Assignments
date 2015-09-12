@@ -3,7 +3,7 @@ package arrays;
 import java.util.Random;
 
 /**
- * Created by Foss on 2015-09-07.
+ * Created by Fabian Gillholm on 2015-09-07.
  */
 public class Arrays {
 
@@ -67,7 +67,8 @@ public class Arrays {
     public static int[] sort(int[] arr) {
         // Clone the array and sort it
         int[] arrSorted = arr.clone();
-        // Fine. You want an implementation of a sorting algorithm? Here you go:
+        // This is much, much worse than just using java.util.Arrays.sort(), but since you want to encourage us to
+        // implement a custom sorting algorithm, here you go
         bogoSort(arrSorted);
         return arrSorted;
     }

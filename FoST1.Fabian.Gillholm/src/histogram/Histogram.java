@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Fabian on 2015-09-08.
+ * Created by Fabian Gillholm on 2015-09-08.
  * Histogram expects a plaintext file with integers separated by a single whitespace or linebreak.
  */
 public class Histogram {

@@ -3,7 +3,7 @@ package arrays;
 import java.lang.reflect.Array;
 
 /**
- * Created by Foss on 2015-09-07.
+ * Created by Fabian Gillholm on 2015-09-07.
  */
 public class ArraysMain {
     public static void main(String[] args) {
