@@ -1,6 +1,7 @@
 package countchars;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -24,8 +25,8 @@ public class CountChars {
         }
 
 
-        File file = new File(filepath);
         try {
+            File file = new File(filepath);
             Scanner fileScan = new Scanner(file);
 
             while(fileScan.hasNext()) {
@@ -59,6 +60,10 @@ public class CountChars {
                 }
             }
 
+        }
+        catch(FileNotFoundException e) {
+            System.out.println("You suck! File was not found.");
+            System.exit(1);
         }
         catch(Exception e) {
             e.printStackTrace();

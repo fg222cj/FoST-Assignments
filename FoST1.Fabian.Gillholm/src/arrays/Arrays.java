@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Random;
+
 /**
  * Created by Foss on 2015-09-07.
  */
@@ -65,7 +67,8 @@ public class Arrays {
     public static int[] sort(int[] arr) {
         // Clone the array and sort it
         int[] arrSorted = arr.clone();
-        java.util.Arrays.sort(arrSorted);
+        // Fine. You want an implementation of a sorting algorithm? Here you go:
+        bogoSort(arrSorted);
         return arrSorted;
     }
 
@@ -103,5 +106,35 @@ public class Arrays {
             arrDiff[i] = Math.abs(arr1[i] - arr2[i]);
         }
         return arrDiff;
+    }
+
+
+    // Bogosort. Shuffles the array randomly until it is sorted
+    public static int[] bogoSort(int[] arr) {
+        while(!isSorted(arr)) {
+            shuffleArray(arr);
+        }
+        return arr;
+    }
+
+    public static boolean isSorted(int[] arr) {
+        for(int i = 0; i < arr.length-1; i ++) {
+            if (arr[i+1] < arr[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static void shuffleArray(int[] arr)
+    {
+        Random random = new Random();
+        for (int i = arr.length - 1; i > 0; i--)
+        {
+            int index = random.nextInt(i + 1);
+            int a = arr[index];
+            arr[index] = arr[i];
+            arr[i] = a;
+        }
     }
 }
