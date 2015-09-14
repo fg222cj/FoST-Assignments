@@ -18,12 +18,16 @@ public class Queue implements QueueInterface {
         return this.size() == 0;
     }
 
+    // Add object to the end of the queue
     public void enqueue(Object element) {
         Node node = new Node(element);
+
+        // If queue is empty, object is placed at both front and end
         if(this.size() == 0) {
             this.head = node;
             this.tail = node;
         }
+        // Otherwise, append it to the last element and place it as tail
         else {
             this.last().setNextNode(node);
             this.tail = node;
@@ -31,6 +35,7 @@ public class Queue implements QueueInterface {
         this.size++;
     }
 
+    // Removes the first object from the queue and returns it
     public Node dequeue() throws IndexOutOfBoundsException {
         Node node = this.head;
         this.head = node.next();
@@ -46,24 +51,25 @@ public class Queue implements QueueInterface {
         return this.tail;
     }
 
+    // Checks if an object exists inside the queue
     public boolean contains(Object o) {
         Node node = this.head;
 
         while(node.hasNext()) {
-            if(node.equals(o)) {
+            if(node.node.equals(o)) {
                 return true;
             }
             node = node.next();
         }
 
-        return node.equals(o);
+        return node.node.equals(o);
     }
 
-    public Iterator<Node> iterator() {
+    public Iterator iterator() {
         return new QueueIterator();
     }
 
-    private class QueueIterator implements Iterator<Node>{
+    private class QueueIterator implements Iterator {
         private Node node = head;
 
         public Node next() {
@@ -73,11 +79,12 @@ public class Queue implements QueueInterface {
         }
 
         public boolean hasNext() {
-            return node.hasNext();
+            return node != null;
         }
     }
 
-    private class Node {
+    // Node contains a stored object and the next Node in the queue
+    public class Node {
         private Object node;
         private Node nextNode = null;
 
@@ -95,6 +102,10 @@ public class Queue implements QueueInterface {
 
         public void setNextNode(Node nextNode) {
             this.nextNode = nextNode;
+        }
+
+        public String toString() {
+            return node.toString();
         }
     }
 }

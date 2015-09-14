@@ -5,6 +5,10 @@ import deck.Deck;
 
 /**
  * Created by Fabian Gillholm on 2015-09-12.
+ * Draw three cards at a time from a deck of 52 cards until no more cards remain.
+ * Losing conditions: If the first card from a set of three is an ace, the game is lost. If the second card is a two,
+ * the game is lost. If the third card is a three, the game is lost.
+ * Winning condition: If the deck runs out of cards and no losing condition has occurred, the game has been won.
  */
 public class Game123 {
     public boolean play() {

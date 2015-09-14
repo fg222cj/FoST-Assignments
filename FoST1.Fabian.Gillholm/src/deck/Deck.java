@@ -6,12 +6,15 @@ import java.util.List;
 
 /**
  * Created by Fabian Gillholm on 2015-09-12.
+ * A deck contains 52 cards of different suites and ranks.
  */
 public class Deck {
     List<Card> deck;
 
     public Deck() {
         this.deck = new ArrayList<Card>();
+
+        // Loop through the suites and ranks, creating one card of each rank in each suite
         for(Card.Suite suite : Card.Suite.values()) {
             for(Card.Rank rank : Card.Rank.values()) {
                 this.deck.add(new Card(suite, rank));
