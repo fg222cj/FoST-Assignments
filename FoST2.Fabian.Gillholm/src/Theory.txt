@@ -1,0 +1,66 @@
+FoST 2  -  Theoretical Questions  -  Fabian Gillholm
+====================================================
+
+1.
+The Java Virtual Machine (JVM) comes in many different implementations. Different implementations may be created for
+use in different environments or be used for different purposes. Programs written in Java are compiled into Java
+Bytecode, which is executed by the JVM.
+
+2.
+Classpath is a parameter that can be set to tell java where to look for the user created java-files. If no classpath is
+set, Java defaults to the current working directory.
+
+3.
+Java can be written in any text editor. A separate compiler can be used to compile a package or class to an executable.
+
+4.
+A jar-file is a collection of of Java classes and other resources packed into a single file. This is useful as a means
+of distributing applications and libraries.
+
+5.
+When running an application java looks for the a method matching "public static void main(String[])". If it's an applet,
+it looks for init() instead.
+
+6.
+A package is the java equivalent of a namespace. It's a way to bundle classes that are closely related to each other.
+
+7.
+An interface is a blueprint that other classes may need to implement. The reason it should not be changed is that
+classes that rely on it will also need to be changed accordingly, and we are not always aware of all the classes that
+implement a specific interface.
+
+8.
+Public, private, protected and package private. Package private is the default, and means that the method, class or
+field is accessible to all other classes in the same package.
+
+9.
+An exception is a foreseeable problem within the code that can (and should) be caught and handled. An error is an
+anomaly that shouldn't reasonably be expected to occur (if it is, then the code should be improved so that it doesn't)
+and that shouldn't be caught. It is extreme enough that the preferred way of dealing with it is to allow the application
+to crash.
+
+10.
+OutOfMemoryError occurs when the application tries to exceed its allotted amount of memory. NoClassDefFoundError occurs
+when no class definition for a class can be found. A class definition is created when a class is first loaded and if
+the loading fails for whatever reason and the program keeps running, then the next time the same class is needed java
+will throw a NoClassDefFoundError error since the definition was never created. NullPointerException occurs when we try
+to do something with or to an object with no assigned value (except for assigning it a value).
+
+11.
+I don't. But I should probably try to be aware of what exceptions might be thrown and catch them. The catch code should
+preferably do something in response to the exception so that the application can keep running as intended, possibly with
+additional action required from the user. There should also be a catch-all at the top of the program to capture
+unforeseen exceptions.
+
+12.
+Because the code might have bugs. Because it might not work according to the requirements. Because it might not be user
+friendly. Because even if none of those cases apply, testing is the only way to make sure of that and be confident that
+the application is of good quality.
+
+13.
+Javadoc is a tool to create external documentation from internal code comments. For it to work the comments must follow
+a specific syntax. A comment should be placed before a class, method or field declaration and can contain special tags.
+Example:
+/**
+ * This is a comment.
+ */
