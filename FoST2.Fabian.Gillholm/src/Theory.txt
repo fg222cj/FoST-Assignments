@@ -25,9 +25,9 @@ it looks for init() instead.
 A package is the java equivalent of a namespace. It's a way to bundle classes that are closely related to each other.
 
 7.
-An interface is a blueprint that other classes may need to implement. The reason it should not be changed is that
-classes that rely on it will also need to be changed accordingly, and we are not always aware of all the classes that
-implement a specific interface.
+An interface is a blueprint (actually more like a contract) that other classes may need to implement. The reason it
+should not be changed is that classes that rely on it will also need to be changed accordingly, and we are not always
+aware of all the classes that implement a specific interface.
 
 8.
 Public, private, protected and package private. Package private is the default, and means that the method, class or
