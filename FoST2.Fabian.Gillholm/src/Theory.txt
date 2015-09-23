@@ -47,15 +47,15 @@ will throw a NoClassDefFoundError error since the definition was never created. 
 to do something with or to an object with no assigned value (except for assigning it a value).
 
 11.
-I don't. But I should probably try to be aware of what exceptions might be thrown and catch them. The catch code should
-preferably do something in response to the exception so that the application can keep running as intended, possibly with
-additional action required from the user. There should also be a catch-all at the top of the program to capture
-unforeseen exceptions.
+I don't. But if I did I would probably try to be aware of what exceptions might be thrown and catch them. The catch code
+should preferably do something in response to the exception so that the application can keep running as intended,
+possibly with additional action required from the user. There should also be a catch-all at the top of the program to
+capture unforeseen exceptions.
 
 12.
 Because the code might have bugs. Because it might not work according to the requirements. Because it might not be user
 friendly. Because even if none of those cases apply, testing is the only way to make sure of that and be confident that
-the application is of good quality.
+the application is of high quality.
 
 13.
 Javadoc is a tool to create external documentation from internal code comments. For it to work the comments must follow
