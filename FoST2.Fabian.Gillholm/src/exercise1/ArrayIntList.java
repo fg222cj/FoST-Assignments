@@ -28,6 +28,9 @@ public class ArrayIntList extends AbstractIntCollection implements IntList {
     }
 
     public void remove(int index) {
+        if(index < 0 || index > this.size -  1) {
+            throw new IndexOutOfBoundsException();
+        }
         for(int i = index; i < size; i++) {
             this.values[i] = this.values[i + 1];
         }

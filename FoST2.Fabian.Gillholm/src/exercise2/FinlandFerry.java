@@ -7,8 +7,9 @@ import java.util.List;
 /**
  * Created by Fabian Gillholm on 2015-09-23.
  * Used to ship large amounts of drunk people to and from our neighbor in the east.
+ * At least that's the official story. We actually just dump them and their vehicles in the ocean.
  */
-public class FinlandFerry implements Ferry{
+public class FinlandFerry implements Ferry {
     private List<Vehicle> vehicles;
     private int moneyEarned;
     private int availableVehicleSpace;
