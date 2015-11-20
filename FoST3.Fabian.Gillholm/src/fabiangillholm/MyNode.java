@@ -50,7 +50,6 @@ public class MyNode<E> extends Node<E> {
             }
         }
         return false;
-        //return predecessors.contains(node);
     }
 
     @Override
@@ -61,7 +60,6 @@ public class MyNode<E> extends Node<E> {
             }
         }
         return false;
-        //return successors.contains(node);
     }
 
     @Override
