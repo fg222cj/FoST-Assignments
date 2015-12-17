@@ -83,8 +83,6 @@ public class TestDirectedGraph extends TestCase {
 		assertEquals(5,g.nodeCount());
 		assertEquals(5,g.edgeCount());
 		
-		System.out.println(g);
-		
 		/* Test contains */
 		assertTrue(g.containsNodeFor(i[1]));
 		assertTrue(g.containsNodeFor(i[4]));
@@ -338,8 +336,6 @@ public class TestDirectedGraph extends TestCase {
 		while (it.hasNext()) {
 			count++;
 			p = it.next();
-			System.out.println("n: " + n.toString());
-			System.out.println("p: " + p.toString());
 			assertTrue(n.hasPred(p));
 			assertTrue(p.hasSucc(n));
 			if (p == n)

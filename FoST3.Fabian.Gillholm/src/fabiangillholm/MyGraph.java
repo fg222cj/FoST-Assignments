@@ -64,6 +64,10 @@ public class MyGraph<E> implements DirectedGraph<E> {
             return false;
         }
 
+        if(toNode.hasPred(fromNode)) {
+            return false;
+        }
+
         fromNode.addSucc(toNode);
         toNode.addPred(fromNode);
 
@@ -82,7 +86,7 @@ public class MyGraph<E> implements DirectedGraph<E> {
         try {
             MyNode<E> fromNode = getNodeFor(from);
             MyNode<E> toNode = getNodeFor(to);
-            return fromNode.hasSucc(toNode);
+            return fromNode.hasSucc(toNode) && toNode.hasPred(fromNode);
         }
 
         catch(IllegalArgumentException e) {
@@ -196,16 +200,9 @@ public class MyGraph<E> implements DirectedGraph<E> {
 
             Node<E> next;
 
-            while(predIterator.hasNext()) {
-                next = predIterator.next();
-                predIterator.remove();
-                removeEdgeFor(next.item(), node.item());
-            }
-
-            while(succIterator.hasNext()) {
-                next = succIterator.next();
-                succIterator.remove();
-                removeEdgeFor(node.item(), next.item());
+            for(MyNode<E> noderino : nodes) {
+                removeEdgeFor(noderino.item(), node.item());
+                removeEdgeFor(node.item(), noderino.item());
             }
 
             nodes.remove(node);

@@ -45,7 +45,7 @@ public class MyNode<E> extends Node<E> {
     @Override
     public boolean hasPred(Node<E> node) {
         for(Node<E> each : predecessors) {
-            if(each.item() == node.item()) {
+            if(each.equals(node)) {
                 return true;
             }
         }
@@ -55,7 +55,7 @@ public class MyNode<E> extends Node<E> {
     @Override
     public boolean hasSucc(Node<E> node) {
         for(Node<E> each : successors) {
-            if(each.item() == node.item()) {
+            if(each.equals(node)) {
                 return true;
             }
         }
@@ -80,5 +80,9 @@ public class MyNode<E> extends Node<E> {
     @Override
     public Iterator<Node<E>> succsOf() {
         return successors.iterator();
+    }
+
+    public boolean equals(Node other) {
+        return this.item() == other.item();
     }
 }
