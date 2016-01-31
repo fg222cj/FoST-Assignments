@@ -257,8 +257,8 @@ public class TestDirectedGraph extends TestCase {
 	
 	public void testGML() throws Exception {
 		DirectedGraph<Integer> cyclic = generator.getSmallCyclic();
-		//GML<Integer> gml = new MyGML(cyclic);
-		//gml.dumpGML();
+		GML<Integer> gml = new MyGML(cyclic);
+		gml.dumpGML();
 	}
 
 	

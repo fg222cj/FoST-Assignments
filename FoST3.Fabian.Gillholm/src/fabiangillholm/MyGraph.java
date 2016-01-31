@@ -9,9 +9,9 @@ import java.util.*;
  * Created by Fabian Gillholm on 2015-10-13.
  */
 public class MyGraph<E> implements DirectedGraph<E> {
-    private List<MyNode<E>> nodes = new ArrayList<MyNode<E>>();
-    private ArrayList<Node<E>> heads = new ArrayList<Node<E>>();
-    private ArrayList<Node<E>> tails = new ArrayList<Node<E>>();
+    private List<MyNode<E>> nodes = new LinkedList<MyNode<E>>();
+    private List<Node<E>> heads = new LinkedList<Node<E>>();
+    private List<Node<E>> tails = new LinkedList<Node<E>>();
 
     @Override
     public MyNode<E> addNodeFor(E item) {
